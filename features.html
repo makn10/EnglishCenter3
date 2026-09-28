@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Platform Features | English Learning Center</title>
+    <meta name="description" content="Explore all the premium features of our English learning platform.">
+    
+    <!-- Google Fonts: Poppins, Inter, Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#E0B0FF',
+                            purpleLight: '#F3E5F5',
+                            red: '#E41E26',
+                            redLight: '#FDECEA',
+                            bg: '#F8F9FF',
+                            dark: '#1A1A3D',
+                            gray: '#6B7280',
+                            white: '#FFFFFF',
+                            blue: '#2563EB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(26, 26, 61, 0.08)',
+                        'cta': '0 10px 20px -5px rgba(228, 30, 38, 0.3)',
+                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #F8F9FF; transition: background-color 0.3s ease, color 0.3s ease; }
+        .glass-nav {
+            background: rgba(248, 249, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(224, 176, 255, 0.3);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+        .dark .glass-nav {
+            background: rgba(26, 26, 61, 0.85);
+            border-bottom: 1px solid rgba(224, 176, 255, 0.1);
+        }
+        .hover-lift { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 30px -5px rgba(26, 26, 61, 0.1);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#E0B0FF 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F8F9FF; }
+        .dark ::-webkit-scrollbar-track { background: #1A1A3D; }
+        ::-webkit-scrollbar-thumb { background: #E0B0FF; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E41E26; }
+    </style>
+</head>
+<body class="font-sans text-brand-gray dark:text-gray-300 dark:bg-[#12122b] antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo linking back to main page -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer gap-3 hover:opacity-80 transition-opacity">
+                    <div class="bg-brand-purple text-brand-dark p-2 rounded-lg transition-colors duration-300">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading font-extrabold text-xl text-brand-dark dark:text-white leading-none block tracking-tight">
+                            Back to Home
+                        </span>
+                    </div>
+                </a>
+                
+                <div class="flex items-center gap-4">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-brand-purpleLight dark:bg-gray-800 text-brand-dark dark:text-yellow-400 flex items-center justify-center transition-colors focus:outline-none cursor-pointer">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="index.html#contact" class="hidden sm:flex bg-brand-red text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-700 transition-all shadow-cta hover:shadow-lg items-center gap-2">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Features Header -->
+    <section class="pt-32 pb-20 relative overflow-hidden bg-brand-dark text-white border-b border-gray-800">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-brand-purple opacity-20 rounded-full blur-[100px]"></div>
+        <div class="absolute -left-20 bottom-0 w-80 h-80 bg-brand-red opacity-10 rounded-full blur-[100px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="bg-brand-purple/20 text-brand-purple border border-brand-purple/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">Platform Ecosystem</span>
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">Everything You Need to <br><span class="text-brand-purple">Master English</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">Explore the cutting-edge tools, interactive content, and personalized tracking systems designed to accelerate your fluency from Day 1.</p>
+            
+            <a href="#explore" class="animate-bounce inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-brand-dark hover:bg-brand-purple transition-colors">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Detailed Features Grid -->
+    <section id="explore" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Feature 1: AI Tutor -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Technology" class="rounded-3xl shadow-soft border border-brand-purpleLight dark:border-gray-700 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">AI-Powered Personal Tutor</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Practice anytime, anywhere. Our advanced AI tutor adapts to your learning speed and provides instant feedback without judgment.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Real-time grammar correction and feedback.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Voice-to-voice speaking practice to fix pronunciation.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Custom role-play scenarios (e.g., job interviews, ordering coffee).</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 2: Smart Dashboard -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-brand-red opacity-10 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard Analytics" class="rounded-3xl shadow-soft border border-brand-redLight dark:border-gray-700 relative z-10 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-brand-red dark:text-red-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Smart Progress Tracking</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Stop guessing your level. Our dashboard provides detailed analytics on your learning journey, helping you identify exact weaknesses.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Live CEFR Level monitoring (A1 to C2).</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Vocabulary growth tracker and retention stats.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Weekly performance reports emailed directly to you.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3: Interactive Classes -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Live Classes" class="rounded-3xl shadow-soft border border-gray-200 dark:border-gray-700 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Live Interactive Sessions</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Connect with expert instructors (CELTA/TESOL certified) in real-time for an immersive learning experience.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Small batch sizes (Max 15 students) for personalized attention.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Group discussions and breakout rooms for peer practice.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Class recordings available for 6 months to review later.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 4: Gamified Learning -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -left-6 -bottom-6 w-32 h-32 bg-yellow-400 opacity-10 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gamification" class="rounded-3xl shadow-soft border border-yellow-200 dark:border-gray-700 relative z-10 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Gamified Vocabulary Builder</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Learning shouldn't be boring. Build your word bank using our scientifically proven spaced-repetition game.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Maintain daily streaks to earn platform badges and rewards.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Interactive flashcards with native speaker pronunciation.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Compete with friends on the global leaderboard.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 5: IELTS & TOEFL Simulator -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exam Prep" class="rounded-3xl shadow-soft border border-indigo-200 dark:border-gray-700 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">IELTS & TOEFL Simulator</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Preparing to study abroad? Take timed mock exams that perfectly replicate the real testing environment.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">AI instantly grades your essays and provides band score predictions.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Listening tests with realistic accents (British, Australian, American).</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">1-on-1 speaking evaluation with former IELTS examiners.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 6: Global Community -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-teal-400 opacity-10 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Community" class="rounded-3xl shadow-soft border border-teal-200 dark:border-gray-700 relative z-10 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Global Peer Community</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Language is about connection. Join our exclusive student forum and practice with peers from over 50 different countries.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Join interest-based Voice Rooms (Tech, Movies, Sports).</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Find a dedicated language-exchange partner.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Weekly community challenges hosted by native speakers.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 7: Business Hub -->
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business English" class="rounded-3xl shadow-soft border border-orange-200 dark:border-gray-700 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Corporate Business Hub</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Designed for professionals. Master the art of corporate communication to secure promotions and international jobs.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Professional email templates and writing workshops.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Presentation skills and public speaking mastery.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Mock job interviews with HR experts.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 8: Certification -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-purple-500 opacity-10 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Certification" class="rounded-3xl shadow-soft border border-purple-200 dark:border-gray-700 relative z-10 hover-lift">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Verified Certification</h2>
+                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Prove your skills to the world. Upon completing a course, receive an internationally recognized digital credential.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Unique certificate ID for employer verification.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">One-click integration to add it directly to your LinkedIn profile.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Physical printed certificates available upon request.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action (Enhanced) -->
+    <section class="py-24 bg-[#0a1930] relative overflow-hidden text-center border-t border-brand-purple/20">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue opacity-20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-purple opacity-20 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <span class="text-brand-purple font-bold tracking-wider uppercase text-sm mb-4 block">Take Action Today</span>
+            <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">Ready to unlock all these features?</h2>
+            <p class="text-gray-300 mb-10 text-lg max-w-2xl mx-auto">Join thousands of students who have already transformed their careers, confidence, and lives through our platform.</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="index.html#pricing" class="w-full sm:w-auto bg-brand-red text-white px-10 py-5 rounded-full font-bold hover:bg-red-700 transition-all shadow-cta inline-flex items-center justify-center gap-2 hover-lift text-lg">
+                    See Pricing Plans <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="index.html#contact" class="w-full sm:w-auto bg-transparent border-2 border-brand-purple text-white px-10 py-5 rounded-full font-bold hover:bg-brand-purple hover:text-brand-dark transition-all inline-flex items-center justify-center gap-2 hover-lift text-lg">
+                    Contact Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL FOOTER ADDED HERE -->
+    <footer id="contact" class="bg-brand-dark text-white pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-gray-700 pb-16">
+                
+                <!-- Info & Apps Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-brand-purple text-brand-dark p-2 rounded-lg">
+                            <i class="fas fa-book-reader text-xl"></i>
+                        </div>
+                        <span class="font-heading font-extrabold text-2xl text-white leading-none tracking-tight">
+                            English<span class="text-brand-red">.</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        The ultimate AI-powered ecosystem to master English. Learn, practice, and succeed globally.
+                    </p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="flex items-center gap-3 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-xl hover:bg-brand-purple hover:text-brand-dark transition-all w-max">
+                            <i class="fab fa-apple text-2xl"></i>
+                            <div class="text-left">
+                                <p class="text-[10px] leading-none mb-1 text-gray-300">Download on the</p>
+                                <p class="text-sm font-bold leading-none">App Store</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center gap-3 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-xl hover:bg-brand-purple hover:text-brand-dark transition-all w-max">
+                            <i class="fab fa-google-play text-xl text-green-400"></i>
+                            <div class="text-left">
+                                <p class="text-[10px] leading-none mb-1 text-gray-300">GET IT ON</p>
+                                <p class="text-sm font-bold leading-none">Play Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Platform Links Column -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Platform</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-red transition">Student Dashboard</a></li>
+                        <li><a href="index.html#courses" class="hover:text-brand-red transition">Browse Courses</a></li>
+                        <li><a href="index.html#ai-tutor-section" class="hover:text-brand-red transition">AI Chat Tutor</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Vocabulary Builder</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links Column -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-brand-red transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Become a Teacher</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-red transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Contact Column -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Support & Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm mb-8">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand-red mt-1"></i> Global EdTech Hub, Gazipur, BD</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand-red"></i> support@englishacademy.pro</li>
+                    </ul>
+
+                    <h4 class="font-heading font-bold text-lg mb-4">Subscribe</h4>
+                    <form onsubmit="event.preventDefault();" class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" required class="bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-brand-purple text-sm">
+                        <button type="submit" class="bg-brand-red text-white py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-cta text-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center md:flex md:justify-between md:text-left text-sm text-gray-500 flex-col md:flex-row items-center gap-4">
+                <p>&copy; 2026 English Learning Center. All Rights Reserved.</p>
+                <div class="text-xs text-brand-purple font-handwriting text-lg tracking-wide bg-gray-900/50 px-4 py-1.5 rounded-full border border-brand-purple/20">
+                    Crafted with ❤️ by CodeArtisan &bull; English Learning Center
+                </div>
+                <div class="space-x-5 text-white">
+                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-youtube text-lg"></i></a>
+                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-linkedin-in text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Dark Mode -->
+    <script>
+        const htmlRoot = document.getElementById('html-root');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        function toggleTheme() {
+            if (htmlRoot.classList.contains('dark')) {
+                htmlRoot.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlRoot.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlRoot.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>
