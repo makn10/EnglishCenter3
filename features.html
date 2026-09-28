@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" id="html-root">
+<html lang="en" class="scroll-smooth dark" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Platform Features | English Learning Center</title>
-    <meta name="description" content="Explore all the premium features of our English learning platform.">
+    <title>Features Detailed | English Learning Center</title>
     
-    <!-- Google Fonts: Poppins, Inter, Caveat -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -25,25 +24,15 @@
                     colors: {
                         brand: {
                             purple: '#E0B0FF',
-                            purpleLight: '#F3E5F5',
                             red: '#E41E26',
-                            redLight: '#FDECEA',
-                            bg: '#F8F9FF',
-                            dark: '#1A1A3D',
+                            dark: '#0a0a14', 
+                            card: '#161625',
                             gray: '#6B7280',
-                            white: '#FFFFFF',
-                            blue: '#2563EB'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         heading: ['Poppins', 'sans-serif'],
-                        handwriting: ['Caveat', 'cursive'],
-                    },
-                    boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(26, 26, 61, 0.08)',
-                        'cta': '0 10px 20px -5px rgba(228, 30, 38, 0.3)',
-                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
                     }
                 }
             }
@@ -51,275 +40,446 @@
     </script>
 
     <style>
-        body { background-color: #F8F9FF; transition: background-color 0.3s ease, color 0.3s ease; }
+        body { background-color: #0a0a14; color: #d1d5db; overflow-x: hidden; }
         .glass-nav {
-            background: rgba(248, 249, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(224, 176, 255, 0.3);
-            transition: background 0.3s ease, border-color 0.3s ease;
+            background: rgba(10, 10, 20, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .dark .glass-nav {
-            background: rgba(26, 26, 61, 0.85);
-            border-bottom: 1px solid rgba(224, 176, 255, 0.1);
-        }
-        .hover-lift { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
+        .hover-lift { transition: all 0.4s ease; }
         .hover-lift:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 30px -5px rgba(26, 26, 61, 0.1);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(224, 176, 255, 0.3);
         }
-        .bg-pattern {
-            background-image: radial-gradient(#E0B0FF 2px, transparent 2px);
-            background-size: 30px 30px;
+        
+        /* Icon Backgrounds */
+        .icon-blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .icon-green { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .icon-orange { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+        .icon-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+        .icon-red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+        .icon-indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+        
+        /* Details Section Card Styling */
+        .feature-sub-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
         }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #F8F9FF; }
-        .dark ::-webkit-scrollbar-track { background: #1A1A3D; }
-        ::-webkit-scrollbar-thumb { background: #E0B0FF; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #E41E26; }
+        .feature-sub-card:hover {
+            background: rgba(255,255,255,0.05);
+        }
     </style>
 </head>
-<body class="font-sans text-brand-gray dark:text-gray-300 dark:bg-[#12122b] antialiased">
+<body class="font-sans antialiased">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 shadow-sm" id="navbar">
+    <nav class="fixed w-full z-50 glass-nav" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <!-- Logo linking back to main page -->
                 <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer gap-3 hover:opacity-80 transition-opacity">
-                    <div class="bg-brand-purple text-brand-dark p-2 rounded-lg transition-colors duration-300">
+                    <div class="bg-brand-purple text-black p-2 rounded-lg">
                         <i class="fas fa-arrow-left text-xl"></i>
                     </div>
                     <div>
-                        <span class="font-heading font-extrabold text-xl text-brand-dark dark:text-white leading-none block tracking-tight">
-                            Back to Home
+                        <span class="font-heading font-extrabold text-xl text-white leading-none block tracking-tight">
+                            English<span class="text-brand-red">.</span>
                         </span>
                     </div>
                 </a>
                 
-                <div class="flex items-center gap-4">
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-brand-purpleLight dark:bg-gray-800 text-brand-dark dark:text-yellow-400 flex items-center justify-center transition-colors focus:outline-none cursor-pointer">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
-                    </button>
-                    <a href="index.html#contact" class="hidden sm:flex bg-brand-red text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-700 transition-all shadow-cta hover:shadow-lg items-center gap-2">
-                        Get Started
+                <div class="flex items-center gap-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white font-medium transition-colors">Home</a>
+                    <a href="index.html#contact" class="bg-brand-red text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-700 transition-all shadow-lg">
+                        Get Started <i class="fas fa-arrow-right text-sm ml-1"></i>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Features Header -->
-    <section class="pt-32 pb-20 relative overflow-hidden bg-brand-dark text-white border-b border-gray-800">
-        <div class="absolute inset-0 bg-pattern opacity-10"></div>
-        <div class="absolute -right-20 -top-20 w-96 h-96 bg-brand-purple opacity-20 rounded-full blur-[100px]"></div>
-        <div class="absolute -left-20 bottom-0 w-80 h-80 bg-brand-red opacity-10 rounded-full blur-[100px]"></div>
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 relative">
+        <!-- Abstract Blurs -->
+        <div class="absolute -right-32 top-0 w-[500px] h-[500px] bg-brand-purple opacity-10 rounded-full blur-[120px]"></div>
+        <div class="absolute -left-32 top-40 w-[400px] h-[400px] bg-blue-600 opacity-10 rounded-full blur-[100px]"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="bg-brand-purple/20 text-brand-purple border border-brand-purple/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">Platform Ecosystem</span>
-            <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight">Everything You Need to <br><span class="text-brand-purple">Master English</span></h1>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">Explore the cutting-edge tools, interactive content, and personalized tracking systems designed to accelerate your fluency from Day 1.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-red font-bold tracking-widest uppercase text-xs mb-4 block">Platform Architecture</span>
+                <h1 class="font-heading text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                    A Complete Ecosystem <br>for <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-blue-400">Fluency</span>
+                </h1>
+                <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                    We combine world-class human instructors with cutting-edge AI technology. Dive deep into the 6 pillars of our platform designed to give you the fastest path to English mastery.
+                </p>
+            </div>
+
+            <!-- The 6 Overview Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift relative overflow-hidden">
+                    <div class="w-10 h-10 icon-blue rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-robot"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">AI Personal Tutor</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Practice speaking and writing 24/7. Our AI corrects your grammar and role-plays real-life scenarios.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift">
+                    <div class="w-10 h-10 icon-green rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Live Expert Classes</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Join interactive live sessions with certified instructors. Available for group discussions or 1-on-1 mentorship.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift">
+                    <div class="w-10 h-10 icon-orange rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Smart Progress Tracking</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Watch your CEFR level increase. Our dashboard tracks your vocabulary size and speaking fluency.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift">
+                    <div class="w-10 h-10 icon-purple rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-microphone-alt"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Interactive Speaking</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Overcome hesitation. Engage in AI-driven mock interviews with instant pronunciation feedback.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift">
+                    <div class="w-10 h-10 icon-red rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-font"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Grammar & Vocab</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Structured lessons covering everything from basic Tenses to Advanced Idioms with daily flashcards.</p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover-lift">
+                    <div class="w-10 h-10 icon-indigo rounded-lg flex items-center justify-center text-lg mb-6"><i class="fas fa-certificate"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-3">Verified Certification</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Earn a professional certificate upon course completion to showcase your English proficiency on LinkedIn.</p>
+                </div>
+            </div>
             
-            <a href="#explore" class="animate-bounce inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-brand-dark hover:bg-brand-purple transition-colors">
-                <i class="fas fa-arrow-down"></i>
+            <div class="flex flex-col items-center mt-10">
+                <p class="text-gray-500 mb-4 text-sm font-medium tracking-widest uppercase">Explore in detail</p>
+                <div class="w-px h-16 bg-gradient-to-b from-gray-500 to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 1. AI PERSONAL TUTOR
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-blue-900/20 text-blue-400 px-4 py-2 rounded-full border border-blue-500/20">
+                        <i class="fas fa-robot"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 01</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Advanced AI Personal Tutor</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Don't wait for your next scheduled class to clear a doubt. Our custom-trained AI tutor is available 24/7. It doesn't just give answers; it guides you to the correct sentence structure just like a human teacher would.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="feature-sub-card">
+                            <i class="fas fa-comment-dots text-2xl text-blue-400 mb-3 block"></i>
+                            <h4 class="text-white font-bold mb-2">Contextual Chat</h4>
+                            <p class="text-sm text-gray-500">The AI remembers your past mistakes and customizes conversations to test your weak points.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <i class="fas fa-magic text-2xl text-blue-400 mb-3 block"></i>
+                            <h4 class="text-white font-bold mb-2">Instant Correction</h4>
+                            <p class="text-sm text-gray-500">Type or speak a sentence, and get a detailed breakdown of grammar errors instantly.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <i class="fas fa-user-tie text-2xl text-blue-400 mb-3 block"></i>
+                            <h4 class="text-white font-bold mb-2">Roleplay Scenarios</h4>
+                            <p class="text-sm text-gray-500">Practice real-life situations like ordering food, visa interviews, or hotel bookings.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <i class="fas fa-language text-2xl text-blue-400 mb-3 block"></i>
+                            <h4 class="text-white font-bold mb-2">Multi-Accent Voice</h4>
+                            <p class="text-sm text-gray-500">Listen to responses in American, British, or Australian accents to train your ears.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-blue-500 opacity-20 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Interface" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                    
+                    <!-- Floating Widget -->
+                    <div class="absolute -bottom-8 -left-8 bg-brand-card border border-gray-700 p-5 rounded-2xl shadow-2xl z-20 hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center"><i class="fas fa-check text-white"></i></div>
+                            <div>
+                                <p class="text-white font-bold">"I goes to market"</p>
+                                <p class="text-red-400 text-xs line-through mt-1">Incorrect Grammar</p>
+                                <p class="text-green-400 text-sm font-bold mt-1">"I go to the market"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 2. LIVE EXPERT CLASSES
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 bg-[#0c0c16] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-green-900/20 text-green-400 px-4 py-2 rounded-full border border-green-500/20">
+                        <i class="fas fa-chalkboard-teacher"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 02</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Live Expert Classes</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Technology is great, but human connection is vital for mastering a language. Our live sessions are hosted via premium video infrastructure, ensuring you get real-time mentorship from globally certified instructors.
+                    </p>
+                    
+                    <ul class="space-y-5 pt-4">
+                        <li class="flex items-start gap-4 p-4 feature-sub-card">
+                            <div class="w-10 h-10 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center shrink-0 mt-1"><i class="fas fa-users"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Strictly Small Batches</h4>
+                                <p class="text-gray-500 text-sm mt-1">We cap our live classes at 15 students max. This guarantees that every student gets a chance to speak and interact directly with the teacher.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 feature-sub-card">
+                            <div class="w-10 h-10 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center shrink-0 mt-1"><i class="fas fa-video"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Breakout Rooms</h4>
+                                <p class="text-gray-500 text-sm mt-1">During the class, the teacher will split you into pairs in private digital rooms to practice debates, dialogues, and discussions.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 feature-sub-card">
+                            <div class="w-10 h-10 bg-green-900/30 text-green-400 rounded-full flex items-center justify-center shrink-0 mt-1"><i class="fas fa-cloud-download-alt"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Cloud Recordings</h4>
+                                <p class="text-gray-500 text-sm mt-1">Missed a class? No problem. Full HD recordings of your live classes are instantly uploaded to your dashboard and saved for 6 months.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-green-500 opacity-10 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Live Classes" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 3. SMART PROGRESS TRACKING
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-orange-900/20 text-orange-400 px-4 py-2 rounded-full border border-orange-500/20">
+                        <i class="fas fa-chart-line"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 03</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Smart Progress Tracking</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        You can't improve what you don't measure. Our platform tracks over 50 different data points as you learn, giving you a crystal clear view of your strengths and weaknesses.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div>
+                            <div class="text-3xl font-extrabold text-white mb-1">CEFR <span class="text-orange-400">Tracker</span></div>
+                            <p class="text-sm text-gray-500">Watch your official global level move from A1 (Beginner) to C2 (Mastery) in real-time.</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-white mb-1">Vocab <span class="text-orange-400">Bank</span></div>
+                            <p class="text-sm text-gray-500">See exactly how many unique words you have successfully memorized this week.</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-white mb-1">Fluency <span class="text-orange-400">Score</span></div>
+                            <p class="text-sm text-gray-500">AI measures your speaking speed, pauses, and fillers (ums, ahs) to grade fluency.</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-extrabold text-white mb-1">Weekly <span class="text-orange-400">Reports</span></div>
+                            <p class="text-sm text-gray-500">Get a detailed PDF report sent to your email every Sunday showing your analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-orange-500 opacity-20 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard Analytics" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 4. INTERACTIVE SPEAKING
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 bg-[#0c0c16] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-purple-900/20 text-purple-400 px-4 py-2 rounded-full border border-purple-500/20">
+                        <i class="fas fa-microphone-alt"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 04</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Interactive Speaking Studio</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Knowing grammar is useless if you hesitate while speaking. Our dedicated speaking studio forces you out of your comfort zone using specialized speech therapy techniques.
+                    </p>
+                    
+                    <ul class="space-y-4 pt-4">
+                        <li class="flex items-center gap-4 border-b border-gray-800 pb-4">
+                            <i class="fas fa-wave-square text-2xl text-purple-400 w-8 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Pronunciation Analyzer</h4>
+                                <p class="text-gray-500 text-sm mt-1">Read sentences out loud and the system highlights specific syllables you mispronounced.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 border-b border-gray-800 pb-4">
+                            <i class="fas fa-briefcase text-2xl text-purple-400 w-8 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Mock Job Interviews</h4>
+                                <p class="text-gray-500 text-sm mt-1">Practice answering tough HR questions. The system analyzes your confidence and vocabulary.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 pb-4">
+                            <i class="fas fa-theater-masks text-2xl text-purple-400 w-8 text-center"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Tongue Twister Challenges</h4>
+                                <p class="text-gray-500 text-sm mt-1">Fun, gamified exercises to build jaw muscle memory for fast English speaking.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-purple-500 opacity-20 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Speaking Practice" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 5. GRAMMAR & VOCAB
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-red-900/20 text-red-400 px-4 py-2 rounded-full border border-red-500/20">
+                        <i class="fas fa-font"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 05</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Grammar & Vocab Academy</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Say goodbye to boring textbooks. We have transformed complex grammar rules into visual infographics and interactive memory games.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="feature-sub-card">
+                            <h4 class="text-white font-bold mb-2">Spaced Repetition</h4>
+                            <p class="text-sm text-gray-500">Our flashcard system uses scientific algorithms to show you words just before you are about to forget them.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <h4 class="text-white font-bold mb-2">Visual Tenses</h4>
+                            <p class="text-sm text-gray-500">Confused by past perfect? We map all 12 tenses on interactive timelines making them impossible to forget.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <h4 class="text-white font-bold mb-2">Daily Quizzes</h4>
+                            <p class="text-sm text-gray-500">5-minute daily challenges to keep your learning streak alive and earn platform rewards.</p>
+                        </div>
+                        <div class="feature-sub-card">
+                            <h4 class="text-white font-bold mb-2">Advanced Idioms</h4>
+                            <p class="text-sm text-gray-500">Master the native slang and phrasal verbs that you actually hear in English movies and TV shows.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-red-500 opacity-15 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grammar Book" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         DEEP DIVE: 6. VERIFIED CERTIFICATION
+         ============================================== -->
+    <section class="py-24 border-t border-gray-800/50 bg-[#0c0c16] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-3 bg-indigo-900/20 text-indigo-400 px-4 py-2 rounded-full border border-indigo-500/20">
+                        <i class="fas fa-certificate"></i> <span class="text-sm font-bold tracking-wider uppercase">Module 06</span>
+                    </div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white leading-tight">Verified Certification</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Your hard work deserves global recognition. Complete the curriculum, pass our rigorous final mock exam, and receive a credential trusted by top corporations.
+                    </p>
+                    
+                    <ul class="space-y-4 pt-4">
+                        <li class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800">
+                            <i class="fab fa-linkedin text-3xl text-blue-500"></i>
+                            <div>
+                                <h4 class="text-white font-bold">1-Click LinkedIn Add</h4>
+                                <p class="text-gray-500 text-sm mt-1">Directly import your certificate to the 'Licenses & Certifications' section of your profile.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800">
+                            <i class="fas fa-qrcode text-3xl text-white"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Employer Verification</h4>
+                                <p class="text-gray-500 text-sm mt-1">Every certificate has a unique ID and QR code so employers can verify your authenticity instantly.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4 bg-brand-card p-4 rounded-xl border border-gray-800">
+                            <i class="fas fa-print text-3xl text-gray-400"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Physical Copies</h4>
+                                <p class="text-gray-500 text-sm mt-1">Optionally request a high-quality physical print of your certificate mailed directly to your home address.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image Content -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute inset-0 bg-indigo-500 opacity-20 blur-[100px] rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Certificate" class="rounded-3xl shadow-2xl relative z-10 border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="py-24 bg-gradient-to-r from-[#0a0a14] via-[#161625] to-[#0a0a14] border-y border-gray-800 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="font-heading text-4xl md:text-5xl font-extrabold text-white mb-6">Experience it yourself.</h2>
+            <p class="text-gray-400 mb-10 text-lg">Stop reading about features and start using them. Join 50,000+ students mastering English globally.</p>
+            <a href="index.html#pricing" class="bg-brand-red text-white px-10 py-5 rounded-full font-bold hover:bg-red-700 transition-all shadow-[0_10px_30px_rgba(228,30,38,0.3)] inline-flex items-center justify-center gap-2 text-lg hover-lift">
+                Start Learning Today <i class="fas fa-rocket"></i>
             </a>
         </div>
     </section>
 
-    <!-- Detailed Features Grid -->
-    <section id="explore" class="py-24 relative">
+    <!-- FULL FOOTER -->
+    <footer id="contact" class="bg-[#05050a] text-white pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Feature 1: AI Tutor -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI Technology" class="rounded-3xl shadow-soft border border-brand-purpleLight dark:border-gray-700 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">AI-Powered Personal Tutor</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Practice anytime, anywhere. Our advanced AI tutor adapts to your learning speed and provides instant feedback without judgment.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Real-time grammar correction and feedback.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Voice-to-voice speaking practice to fix pronunciation.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Custom role-play scenarios (e.g., job interviews, ordering coffee).</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 2: Smart Dashboard -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-brand-red opacity-10 rounded-full blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard Analytics" class="rounded-3xl shadow-soft border border-brand-redLight dark:border-gray-700 relative z-10 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 text-brand-red dark:text-red-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Smart Progress Tracking</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Stop guessing your level. Our dashboard provides detailed analytics on your learning journey, helping you identify exact weaknesses.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Live CEFR Level monitoring (A1 to C2).</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Vocabulary growth tracker and retention stats.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-red mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Weekly performance reports emailed directly to you.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 3: Interactive Classes -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Live Classes" class="rounded-3xl shadow-soft border border-gray-200 dark:border-gray-700 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Live Interactive Sessions</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Connect with expert instructors (CELTA/TESOL certified) in real-time for an immersive learning experience.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Small batch sizes (Max 15 students) for personalized attention.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Group discussions and breakout rooms for peer practice.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Class recordings available for 6 months to review later.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 4: Gamified Learning -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute -left-6 -bottom-6 w-32 h-32 bg-yellow-400 opacity-10 rounded-full blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gamification" class="rounded-3xl shadow-soft border border-yellow-200 dark:border-gray-700 relative z-10 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Gamified Vocabulary Builder</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Learning shouldn't be boring. Build your word bank using our scientifically proven spaced-repetition game.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Maintain daily streaks to earn platform badges and rewards.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Interactive flashcards with native speaker pronunciation.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-yellow-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Compete with friends on the global leaderboard.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 5: IELTS & TOEFL Simulator -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exam Prep" class="rounded-3xl shadow-soft border border-indigo-200 dark:border-gray-700 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-file-signature"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">IELTS & TOEFL Simulator</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Preparing to study abroad? Take timed mock exams that perfectly replicate the real testing environment.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">AI instantly grades your essays and provides band score predictions.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Listening tests with realistic accents (British, Australian, American).</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-indigo-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">1-on-1 speaking evaluation with former IELTS examiners.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 6: Global Community -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-teal-400 opacity-10 rounded-full blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Global Community" class="rounded-3xl shadow-soft border border-teal-200 dark:border-gray-700 relative z-10 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-globe-americas"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Global Peer Community</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Language is about connection. Join our exclusive student forum and practice with peers from over 50 different countries.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Join interest-based Voice Rooms (Tech, Movies, Sports).</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Find a dedicated language-exchange partner.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-teal-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Weekly community challenges hosted by native speakers.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 7: Business Hub -->
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
-                <div class="w-full md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business English" class="rounded-3xl shadow-soft border border-orange-200 dark:border-gray-700 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Corporate Business Hub</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Designed for professionals. Master the art of corporate communication to secure promotions and international jobs.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Professional email templates and writing workshops.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Presentation skills and public speaking mastery.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-orange-500 mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Mock job interviews with HR experts.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Feature 8: Certification -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-purple-500 opacity-10 rounded-full blur-2xl"></div>
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Certification" class="rounded-3xl shadow-soft border border-purple-200 dark:border-gray-700 relative z-10 hover-lift">
-                </div>
-                <div class="w-full md:w-1/2 space-y-6">
-                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-2xl flex items-center justify-center text-2xl shadow-sm">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark dark:text-white">Verified Certification</h2>
-                    <p class="text-brand-gray dark:text-gray-300 leading-relaxed text-lg">Prove your skills to the world. Upon completing a course, receive an internationally recognized digital credential.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Unique certificate ID for employer verification.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">One-click integration to add it directly to your LinkedIn profile.</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-brand-purple mt-1"></i> <span class="text-brand-dark dark:text-gray-300 font-medium">Physical printed certificates available upon request.</span></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Call to Action (Enhanced) -->
-    <section class="py-24 bg-[#0a1930] relative overflow-hidden text-center border-t border-brand-purple/20">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue opacity-20 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-purple opacity-20 rounded-full blur-[120px]"></div>
-
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <span class="text-brand-purple font-bold tracking-wider uppercase text-sm mb-4 block">Take Action Today</span>
-            <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">Ready to unlock all these features?</h2>
-            <p class="text-gray-300 mb-10 text-lg max-w-2xl mx-auto">Join thousands of students who have already transformed their careers, confidence, and lives through our platform.</p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <a href="index.html#pricing" class="w-full sm:w-auto bg-brand-red text-white px-10 py-5 rounded-full font-bold hover:bg-red-700 transition-all shadow-cta inline-flex items-center justify-center gap-2 hover-lift text-lg">
-                    See Pricing Plans <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="index.html#contact" class="w-full sm:w-auto bg-transparent border-2 border-brand-purple text-white px-10 py-5 rounded-full font-bold hover:bg-brand-purple hover:text-brand-dark transition-all inline-flex items-center justify-center gap-2 hover-lift text-lg">
-                    Contact Support
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FULL FOOTER ADDED HERE -->
-    <footer id="contact" class="bg-brand-dark text-white pt-20 pb-10 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-gray-700 pb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-gray-800 pb-16">
                 
                 <!-- Info & Apps Column -->
                 <div class="lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="bg-brand-purple text-brand-dark p-2 rounded-lg">
+                        <div class="bg-brand-purple text-black p-2 rounded-lg">
                             <i class="fas fa-book-reader text-xl"></i>
                         </div>
                         <span class="font-heading font-extrabold text-2xl text-white leading-none tracking-tight">
@@ -331,17 +491,17 @@
                     </p>
                     
                     <div class="flex flex-col gap-3">
-                        <a href="#" class="flex items-center gap-3 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-xl hover:bg-brand-purple hover:text-brand-dark transition-all w-max">
+                        <a href="#" class="flex items-center gap-3 bg-gray-900 border border-gray-800 text-white px-4 py-2 rounded-xl hover:border-gray-600 transition-all w-max">
                             <i class="fab fa-apple text-2xl"></i>
                             <div class="text-left">
-                                <p class="text-[10px] leading-none mb-1 text-gray-300">Download on the</p>
+                                <p class="text-[10px] leading-none mb-1 text-gray-400">Download on the</p>
                                 <p class="text-sm font-bold leading-none">App Store</p>
                             </div>
                         </a>
-                        <a href="#" class="flex items-center gap-3 bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-xl hover:bg-brand-purple hover:text-brand-dark transition-all w-max">
+                        <a href="#" class="flex items-center gap-3 bg-gray-900 border border-gray-800 text-white px-4 py-2 rounded-xl hover:border-gray-600 transition-all w-max">
                             <i class="fab fa-google-play text-xl text-green-400"></i>
                             <div class="text-left">
-                                <p class="text-[10px] leading-none mb-1 text-gray-300">GET IT ON</p>
+                                <p class="text-[10px] leading-none mb-1 text-gray-400">GET IT ON</p>
                                 <p class="text-sm font-bold leading-none">Play Store</p>
                             </div>
                         </a>
@@ -352,10 +512,10 @@
                 <div>
                     <h4 class="font-heading font-bold text-lg mb-6">Platform</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-brand-red transition">Student Dashboard</a></li>
-                        <li><a href="index.html#courses" class="hover:text-brand-red transition">Browse Courses</a></li>
-                        <li><a href="index.html#ai-tutor-section" class="hover:text-brand-red transition">AI Chat Tutor</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Vocabulary Builder</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">Student Dashboard</a></li>
+                        <li><a href="index.html#courses" class="hover:text-brand-purple transition">Browse Courses</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">AI Chat Tutor</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">Vocabulary Builder</a></li>
                     </ul>
                 </div>
                 
@@ -363,10 +523,10 @@
                 <div>
                     <h4 class="font-heading font-bold text-lg mb-6">Company</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
-                        <li><a href="#" class="hover:text-brand-red transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Become a Teacher</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-brand-red transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">Become a Teacher</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-purple transition">Terms of Service</a></li>
                     </ul>
                 </div>
 
@@ -380,8 +540,8 @@
 
                     <h4 class="font-heading font-bold text-lg mb-4">Subscribe</h4>
                     <form onsubmit="event.preventDefault();" class="flex flex-col gap-3">
-                        <input type="email" placeholder="Email Address" required class="bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-brand-purple text-sm">
-                        <button type="submit" class="bg-brand-red text-white py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-cta text-sm">Subscribe</button>
+                        <input type="email" placeholder="Email Address" required class="bg-gray-900 border border-gray-800 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-brand-purple text-sm">
+                        <button type="submit" class="bg-brand-red text-white py-3 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg text-sm">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -391,36 +551,15 @@
                 <div class="text-xs text-brand-purple font-handwriting text-lg tracking-wide bg-gray-900/50 px-4 py-1.5 rounded-full border border-brand-purple/20">
                     Crafted with ❤️ by CodeArtisan &bull; English Learning Center
                 </div>
-                <div class="space-x-5 text-white">
-                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-facebook-f text-lg"></i></a>
-                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-youtube text-lg"></i></a>
-                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-instagram text-lg"></i></a>
-                    <a href="#" class="hover:text-brand-purple transition"><i class="fab fa-linkedin-in text-lg"></i></a>
+                <div class="space-x-5 text-gray-400">
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-youtube text-lg"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in text-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Script for Dark Mode -->
-    <script>
-        const htmlRoot = document.getElementById('html-root');
-        const themeToggleBtn = document.getElementById('theme-toggle');
-
-        function toggleTheme() {
-            if (htmlRoot.classList.contains('dark')) {
-                htmlRoot.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                htmlRoot.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        if (localStorage.getItem('theme') === 'dark') {
-            htmlRoot.classList.add('dark');
-        }
-
-        themeToggleBtn.addEventListener('click', toggleTheme);
-    </script>
 </body>
 </html>
